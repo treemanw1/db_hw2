@@ -11,3 +11,4 @@ spark = SparkSession.builder.appName("Assigment 2 Question 1").getOrCreate()
 df = spark.read.option("header",True).csv("hdfs://%s:9000/assignment2/part1/input/" % (hdfs_nn))
 df.printSchema()
 
+

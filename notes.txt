@@ -1,0 +1,27 @@
+
+launch
+
+AWS educate tutorial 1
+- create instance
+- record keypair pem file
+- ssh into instance
+	ssh -i ~/<path to pem file> ubuntu@<ip in console>
+	
+
+SSH
+
+hdfs dfs -mkdir -p /assignment2/part1/input
+
+scp -i ~/home/treemanw1/learner_lab_keypair.pem ~/hw2/student_files/data/TA_restaurants_curated_cleaned.csv ec2-user@54.87.47.21:/home/ec2-user
+
+hdfs dfs -put ~/TA_restaurants_curated_cleaned.csv /assignment2/part1/input/
+
+SUBMITTING PY FILES
+
+spark-submit --master spark://172.31.23.212:7077 q1.py 54.87.47.21
+
+To do:
+- view assignment output
+- connect to spark master ec2, clone my new repo
+- edit and push to repo, git pull in ec2 ssh, test
+
