@@ -37,4 +37,5 @@ To do:
 - learn to close cluster gracefully (flintrock)
 - 
 
+BEFORE YOU STOP ATTEMPT TO CLOSE GRACEFULLY
 
