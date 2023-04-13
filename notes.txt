@@ -18,7 +18,14 @@ hdfs dfs -put ~/TA_restaurants_curated_cleaned.csv /assignment2/part1/input/
 
 SUBMITTING PY FILES
 
-spark-submit --master spark://172.31.23.212:7077 q1.py 54.87.47.21
+spark-submit --master spark://<internal-ip-of-spark-master>:7077 q1.py <internal-ip-of-spark-master>
+
+spark-submit --master spark://172.31.29.165:7077 q1.py 172.31.29.165
+
+GIT
+
+sudo yum install git
+
 
 To do:
 - view assignment output
@@ -27,6 +34,7 @@ To do:
 
 13/4 Thursday
 - compare pandas result vs tio result
+- learn to close cluster gracefully (flintrock)
 - 
 
 
