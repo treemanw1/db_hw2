@@ -30,10 +30,10 @@ GIT
 sudo yum install git
 
 COPY
-	from hdfs into local
-	hdfs dfs -get /path/to/hdfs/file /path/to/local/destination
-	hdfs dfs -get /assignment2/output/question1/q1.csv /output
 
+	HDFS -> LOCAL
+	hdfs dfs -get /path/to/hdfs/file /path/to/local/destination
+	hdfs dfs -copyToLocal /assignment2/output/question1/part-00000-bd5b2e4b-fc2f-4e95-8f93-911e804d9059-c000.csv /output
 
 To do:
 - view assignment output
@@ -41,7 +41,13 @@ To do:
 - edit and push to repo, git pull in ec2 ssh, test
 
 13/4 Thursday
-- view file in hdfs
+- view file in hdfs ✓
+scp -i learner_lab_keypair.pem ec2-user@34.230.17.158:/home/ec2-user/output/part-00000-bd5b2e4b-fc2f-4e95-8f93-911e804d9059-c000.csv hw2/output/
+
+- get all of james answers
+- save csvs locally
+- test in 
+
 - compare pandas result vs tio result
 - learn to close cluster gracefully (flintrock)
 - 
