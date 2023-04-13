@@ -37,4 +37,4 @@ df = df.filter(is_not_empty_reviews(col("Reviews"))).filter(
 # print(df.count())
 df.show()
 
-df.write.csv("hdfs://%s:9000/assignment2/output/question1/" % (hdfs_nn), header=True)
+df.coalesce(1).write.csv("hdfs://%s:9000/assignment2/output/question1/" % (hdfs_nn), header=True)
