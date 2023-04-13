@@ -6,7 +6,7 @@ AWS educate tutorial 1
 - record keypair pem file
 - ssh into instance
 	ssh -i ~/<path to pem file> ubuntu@<ip in console>
-	
+	ssh -i ~/.aws
 
 SSH
 
@@ -24,4 +24,9 @@ To do:
 - view assignment output
 - connect to spark master ec2, clone my new repo
 - edit and push to repo, git pull in ec2 ssh, test
+
+13/4 Thursday
+- compare pandas result vs tio result
+- 
+
 
