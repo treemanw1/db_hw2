@@ -44,6 +44,15 @@ To do:
 - view file in hdfs ✓
 scp -i learner_lab_keypair.pem ec2-user@34.230.17.158:/home/ec2-user/output/part-00000-bd5b2e4b-fc2f-4e95-8f93-911e804d9059-c000.csv hw2/output/
 
+SUBMIT q1.py
+spark-submit --master spark://172.31.29.165:7077 q1.py 172.31.29.165
+
+COPY RESULT TO SERVER
+hdfs dfs -copyToLocal /assignment2/output/question1/part-00000-4e979562-de40-416f-a9bd-063f2fe53f4f-c000.csv output
+
+COPY RESULT TO LOCAL
+scp -i learner_lab_keypair.pem ec2-user@34.230.17.158:/home/ec2-user/output/part-00000-bd5b2e4b-fc2f-4e95-8f93-911e804d9059-c000.csv hw2/output/
+
 - get all of james answers
 - save csvs locally
 - test in 

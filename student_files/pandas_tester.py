@@ -1,13 +1,28 @@
 import pandas as pd
 import numpy as np
 
+# pandas q1
+# df = pd.read_csv("./student_files/data/TA_restaurants_curated_cleaned.csv")
+# df = df[df['Number of Reviews'] != 0]
+# print(df.shape)
+# df = df[df['Rating'] >= 1]
+# print(df.shape)
+
+# pandas q2
 df = pd.read_csv("./student_files/data/TA_restaurants_curated_cleaned.csv")
-print(df.shape)
+print(df.columns)
 df = df[df['Number of Reviews'] != 0]
 print(df.shape)
 df = df[df['Rating'] >= 1]
-# print(df.head)
 print(df.shape)
 
-df2 = pd.read_csv("./student_files/output/part-00000-bd5b2e4b-fc2f-4e95-8f93-911e804d9059-c000.csv")
-print(df2.shape)
+
+# answer comparison
+# df2 = pd.read_csv("./student_files/output/q1_answer.csv")
+# print("model answer: ", df2.shape)
+# df2 = pd.read_csv("./student_files/output/q1_myans.csv")
+# print("my ans: ", df2.shape)
+df2 = pd.read_csv("./student_files/output/q1_answer.csv")
+print("model answer: ", df2.shape)
+df2 = pd.read_csv("./student_files/output/q1_myans.csv")
+print("my ans: ", df2.shape)
