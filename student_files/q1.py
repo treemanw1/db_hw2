@@ -9,7 +9,6 @@ hdfs_nn = sys.argv[1]
 
 spark = SparkSession.builder.appName("Assigment 2 Question 1").getOrCreate()
 # YOUR CODE GOES BELOW
-# df = spark.read.option("header",True).csv("hdfs://%s:9000/assignment2/part1/input/" % (hdfs_nn))
 
 @udf(returnType=BooleanType())
 def is_not_empty_reviews(col1):
@@ -37,4 +36,4 @@ df = df.filter(is_not_empty_reviews(col("Reviews"))).filter(
 # print(df.count())
 df.show()
 
-df.coalesce(1).write.mode('overwrite').csv("hdfs://%s:9000/assignment2/output/question1/q1.csv" % (hdfs_nn), header=True)
+df.coalesce(1).write.mode('overwrite').csv("hdfs://%s:9000/assignment2/output/question1/" % (hdfs_nn), header=True)

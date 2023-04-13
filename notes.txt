@@ -12,7 +12,10 @@ SSH
 
 hdfs dfs -mkdir -p /assignment2/part1/input
 
+TRANSFER FILES BETWEEN SERVER AND LOCAL MACHINE
+
 scp -i ~/home/treemanw1/learner_lab_keypair.pem ~/hw2/student_files/data/TA_restaurants_curated_cleaned.csv ec2-user@54.87.47.21:/home/ec2-user
+scp -i learner_lab_keypair.pem ec2-user@34.230.17.158:/home/ec2-user/db_hw2/student_files/output/q1.csv/ ~/hw2/output/
 
 hdfs dfs -put ~/TA_restaurants_curated_cleaned.csv /assignment2/part1/input/
 
@@ -26,6 +29,11 @@ GIT
 
 sudo yum install git
 
+COPY
+	from hdfs into local
+	hdfs dfs -get /path/to/hdfs/file /path/to/local/destination
+	hdfs dfs -get /assignment2/output/question1/q1.csv /output
+
 
 To do:
 - view assignment output
@@ -33,6 +41,7 @@ To do:
 - edit and push to repo, git pull in ec2 ssh, test
 
 13/4 Thursday
+- view file in hdfs
 - compare pandas result vs tio result
 - learn to close cluster gracefully (flintrock)
 - 
